@@ -1,5 +1,5 @@
 const initialPrice = document.querySelector("#initial-price")
-const numberStock = document.querySelector("#nubmer-stocks")
+const numberStock = document.querySelector("#number-stocks")
 const currentPrice = document.querySelector("#current-price")
 const btnCalculate = document.querySelector(".btn-calculate")
 const outputDiv = document.querySelector(".output")
