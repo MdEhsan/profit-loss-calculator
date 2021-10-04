@@ -26,10 +26,14 @@ function clickHandler(e) {
 
 function calculateProfitAndLoss(initialPrice, numberStock, currentPrice) {
 
+    // var ip = Number(initialPrice.value)
+    // var qty = Number(numberStock.value)
+    // var sp = Number(currentPrice.value)
+
 
     if (currentPrice > initialPrice) {
         var profit = (currentPrice - initialPrice) * numberStock;
-        var profitPercentage = (profit / initialPrice) * 100;
+        var profitPercentage = ((currentPrice - initialPrice) / initialPrice) * 100;
 
 
         showMessage(`hey you made a profit of ${profit.toFixed(2)} and the percentage is ${profitPercentage.toFixed(2)} %`)
@@ -38,7 +42,7 @@ function calculateProfitAndLoss(initialPrice, numberStock, currentPrice) {
         var loss = (initialPrice - currentPrice) * numberStock;
 
 
-        var lossPercentage = (loss / initialPrice) * 100;
+        var lossPercentage = ((initialPrice - currentPrice) / initialPrice) * 100;
 
         showMessage(`hey you made a loss of ${loss.toFixed(2)} and the percentage is ${lossPercentage.toFixed(2)} %`)
 
